@@ -11,5 +11,15 @@
   ],
   "env": {
     "MONGODB_URI": "mongodb+srv://sarga:A111a111@cluster0.fjdnf.mongodb.net/"
+  },
+   "build": {
+    "env": {
+      "CI": "true"
+    },
+    "functions": {
+      "preBuild": { "command": "npm install" },
+      "build": { "command": "npm run build" },
+      "postInstall": "cd chat && pip install -r requirements.txt" }
+    }
   }
 }
