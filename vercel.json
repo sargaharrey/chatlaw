@@ -15,10 +15,6 @@
    "build": {
     "env": {
       "CI": "true"
-    },
-    "functions": {
-      "preBuild": { "command": "npm install" },
-      "build": { "command": "npm run build" },
-      "postInstall": "cd chat && pip install -r requirements.txt" }
     }
+    
   }
